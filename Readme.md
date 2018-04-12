@@ -1,7 +1,8 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Роман Вишневский](https://up.htmlacademy.ru/adaptive/14/user/181305).
-* Наставник: `Неизвестно`.
+* Наставник: [Игорь Антонов].
+
 
 ---
 
