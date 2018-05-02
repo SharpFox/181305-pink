@@ -1,0 +1,21 @@
+.page-header {
+    box-sizing: border-box;
+    width: 100%;
+    background-color: $sixteenth-color;
+}
+
+@include media_queries_m() {
+    .page-header {
+        &--start {
+            min-height: 984px;
+        }
+    }
+}
+
+@include media_queries_l() {
+    .page-header {
+        &--start {
+            min-height: 853px;
+        }
+    }
+}

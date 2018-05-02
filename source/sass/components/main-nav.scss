@@ -1,0 +1,157 @@
+.main-nav {
+    position: relative;
+
+    height: 66px;
+    overflow: hidden;
+}
+
+.main-nav__toggle {
+    width: 50px;
+    height: 24px;
+
+    @include font(0, 0);
+    background-color: transparent;
+
+    border: none;
+
+    @include absolute-pseudo-element();
+    top: 21px;
+    right: 20px;
+    z-index: 1;
+
+    &::before {
+        @include absolute-pseudo-element();
+
+        background-color: $first-color;
+        box-shadow: 0 10px $first-color,
+            0 2px 0 -1px transparentize($first-color, 0.85);
+        transition-duration: $primary-transition-duration;
+    
+        top: 0;
+        left: 0;
+    
+        width: 50px;
+        height: 4px;
+    }
+
+    &:hover::before {
+        background-color: $second-color;
+        box-shadow: 0 10px $second-color,
+            0 2px 0 -1px transparentize($second-color, 0.85);
+    }
+
+    &::after {
+        @include absolute-pseudo-element();
+        
+        background-color: $first-color;
+        box-shadow: 0 -2px 0 -1px transparentize($first-color, 0.85);
+    
+        transition-duration: $primary-transition-duration;
+    
+        left: 0;
+        bottom: 0;
+    
+        width: 50px;
+        height: 4px;       
+    }
+
+    &:hover::after {
+        background-color: $second-color;    
+    }    
+}
+
+.main-nav__list {
+    @include clear-list();
+
+    width: 100%;
+}
+
+.main-nav__item {
+    box-sizing: border-box;
+
+    background-color: $first-color;
+    box-shadow: inset 0 -1px $seventeenth-color,
+      inset 0 1px transparentize($first-color, 0.85);
+}
+
+.main-nav__item--logo {
+    min-height: 70px;
+    padding-top: 22px;
+    padding-left: 20px;
+}
+
+.main-nav__item--logo-open {
+    background-color: transparentize($seventeenth-color, 0.7);
+}
+
+.main-nav__link {
+    @include font-set(700, 18px, 32px);
+
+    display: block;
+    min-height: 64px;
+
+    color: $first-color;
+
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    transition-duration: $primary-transition-duration;
+
+    &--active:hover {
+        color: $second-color;    
+    }
+
+    &:active {
+        color: transparentize($second-color, 0.7)
+    }
+}
+
+@include media_queries_m() {
+    .main-nav {
+        height: 110px;
+    }
+
+    .main-nav__toggle {
+        top: 45px;
+    }
+    
+    .main-nav__item--logo {
+        min-height: 110px;
+        padding-top: 27px;
+        padding-left: 20px;
+    
+        box-shadow: inset 0 -1px $seventeenth-color,
+          inset 0 1px transparentize($first-color, 0.85);
+    }
+    
+    .main-nav__item--logo-open {
+        box-shadow: none;
+    }
+}
+
+@include media_queries_l() {
+    .main-nav {
+        @include center();   
+        flex-direction: row;
+
+        background-color: transparentize($seventeenth-color, 0.85);
+
+        overflow: inherit;
+    }
+
+    .main-nav__toggle {
+        display: none;
+    }
+
+    .main-nav__list {
+        @include center();
+
+        width: 960px;
+        min-height: 110px;    
+    }
+
+    .main-nav__item {
+        
+    }
+}

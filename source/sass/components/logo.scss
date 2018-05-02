@@ -1,0 +1,18 @@
+.logo {
+    display: block;
+
+    width: 75px;
+    height: 22px;
+
+    &--footer {
+        width: 147px;
+        height: 40px;
+    }
+}
+
+@include media_queries_m() {
+    .logo {
+        width: 147px;
+        height: 40px;
+    }
+}

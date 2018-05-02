@@ -3,44 +3,47 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Пинк</title>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
 
-  <header class="page-header">
-
-    <a class="logo">
-      <picture>
-        <img class="logo-image" src="http://placehold.it/150x100" width="150" height="100" alt="Логотип Pink">
-      </picture>
-    </a>
+  <header class="page-header page-header--start">
 
     <nav class="main-nav">
       <div class="main-nav__wrapper">
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--active">
-            <a>Главная</a>
+        <ul class="main-nav__list">
+          <li class="main-nav__item main-nav__item--logo main-nav__item--logo-open">
+            <a class="logo">
+              <picture>
+                <img src="http://placehold.it/150x100" width="75" height="22" alt="Логотип Pink">
+              </picture>
+            </a>
           </li>
-          <li class="site-list__item">
-            <a href="photo.html">Фотографии</a>
+          <li class="main-nav__item">
+            <a class="main-nav__link">Главная</a>
           </li>
-          <li class="site-list__item">
-            <a href="form.html">Конкурс</a>
+          <li class="main-nav__item main-nav__item--active">
+            <a class="main-nav__link" href="photo.html">Фотографии</a>
           </li>
-          <li class="site-list__item">
-            <a href="#">HTML ACADEMY</a>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="form.html">Конкурс</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="http://htmlacademy.ru">HTML ACADEMY</a>
           </li>
         </ul>
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
       </div>
-      <button class="main-nav__toggle" type="button">Открыть меню</button>
     </nav>
 
     <div class="intro">
       <div class="intro__wrapper">
         <h1 class="intro__main-title visually-hidden">Взгляните на жизнь иначе!</h1>
         <a href="#" class="intro__button button">Скачать приложение</a>
-        <div class="intro__box">
+        <div class="intro__inner">
           <a href="#" class="intro__logo logo__apple">Скачать для ios</a>
           <a href="#" class="intro__logo logo__android">Скачать для Android</a>
           <a href="#" class="intro__logo logo__windows-phone">Скачать для Windows Phone</a>
@@ -108,6 +111,7 @@
     </section>
 
     <section class="price">
+      <h2 class="visually-hidden">Прайс-лист</h2>
       <div class="price__wrapper">
         <div class="price__items">
 
@@ -182,7 +186,7 @@
 
     <section class="contacts">
       <h2 class="contacts__main-title">Остались вопросы? Свяжитесь с нами!</h2>
-      <div class="contacts__box">
+      <div class="contacts__inner">
         <div class="contacts__item contacts__item--pfone">
           <b class="contacts__title">Звоните:</b>
           <span class="contacts__content">+7 (812) 555-66-66</span>
@@ -201,9 +205,13 @@
 
   </main>
 
-  <footer class="page-footer">
+  <footer class="page-footer page-footer--start">
 
-    <a class="logo logo--footer" href="index"></a>
+    <a class="logo logo--footer">
+      <picture>
+        <img src="http://placehold.it/150x100" alt="Логотип Pink">
+      </picture>
+    </a>
     <p class="social">
       <a class="social__link" href="#">Мы в Твиттере</a>
       <a class="social__link" href="#">Мы в Фейсбуке</a>

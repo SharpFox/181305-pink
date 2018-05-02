@@ -3,35 +3,40 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Пинк</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
 
     <header class="page-header">
 
-        <a class="page-header__logo">
-            <img class="page-header__logo-image" src="http://placehold.it/150x100" width="150" height="100" alt="Pink">
-        </a>
-
         <nav class="main-nav">
             <div class="main-nav__wrapper">
-                <ul class="main-nav__list site-list">
-                    <li class="site-list__item">
-                        <a href="index.html">Главная</a>
+                <ul class="main-nav__list">
+                    <li class="main-nav__item main-nav__item--logo main-nav__item--logo-open">
+                        <a class="logo">
+                            <picture>
+                                <img src="http://placehold.it/150x100" width="75" height="22" alt="Логотип Pink">
+                            </picture>
+                        </a>
                     </li>
-                    <li class="site-list__item site-list__item--active">
-                        <a>Фотографии</a>
+                    <li class="main-nav__item">
+                        <a class="main-nav__link" href="index.html">Главная</a>
                     </li>
-                    <li class="site-list__item">
-                        <a href="form.html">Конкурс</a>
+                    <li class="main-nav__item main-nav__item--active">
+                        <a class="main-nav__link">Фотографии</a>
                     </li>
-                    <li class="site-list__item">
-                        <a href="#">HTML ACADEMY</a>
+                    <li class="main-nav__item">
+                        <a class="main-nav__link" href="form.html">Конкурс</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a class="main-nav__link" href="http://htmlacademy.ru">HTML ACADEMY</a>
                     </li>
                 </ul>
+                <button class="main-nav__toggle" type="button">Открыть меню</button>
             </div>
-            <button class="main-nav__toggle" type="button">Открыть меню</button>
         </nav>
 
         <div class="intro">
@@ -55,7 +60,7 @@
             <article class="gallery-item gallery-item--famous">
                 <h3 class="visually-hidden">Фото №1</h3>
                 <a class="gallery-item__link gallery-item__link--famous" href="#"></a>
-                <div class="gallery-item__box">
+                <div class="gallery-item__inner">
                     <blockquote class="gallery-item__comment">
                         <cite class="gallery-item__comment-top">
                             <b class="gallery-item__author">Анна</b>
@@ -85,7 +90,7 @@
                             <img src="http://placehold.it/150x100" width="150" height="100" alt="Фото №2">
                         </picture>
                     </a>
-                    <div class="gallery-item__box">
+                    <div class="gallery-item__inner">
                         <blockquote class="gallery-item__comment">
                             <cite class="gallery-item__comment-top">
                                 <b class="gallery-item__author">Левон</b>
@@ -113,7 +118,7 @@
                             <img src="http://placehold.it/150x100" width="150" height="100" alt="Фото №3">
                         </picture>
                     </a>
-                    <div class="gallery-item__box">
+                    <div class="gallery-item__inner">
                         <blockquote class="gallery-item__comment">
                             <cite class="gallery-item__comment-top">
                                 <b class="gallery-item__author">Антон</b>
@@ -141,7 +146,7 @@
                             <img src="http://placehold.it/150x100" width="150" height="100" alt="Фото №4">
                         </picture>
                     </a>
-                    <div class="gallery-item__box">
+                    <div class="gallery-item__inner">
                         <blockquote class="gallery-item__comment">
                             <cite class="gallery-item__comment-top">
                                 <b class="gallery-item__author">Борис</b>
@@ -169,7 +174,7 @@
                             <img src="http://placehold.it/150x100" width="150" height="100" alt="Фото №5">
                         </picture>
                     </a>
-                    <div class="gallery-item__box">
+                    <div class="gallery-item__inner">
                         <blockquote class="gallery-item__comment">
                             <cite class="gallery-item__comment-top">
                                 <b class="gallery-item__author">Борис</b>
@@ -197,7 +202,7 @@
                             <img src="http://placehold.it/150x100" width="150" height="100" alt="Фото №6">
                         </picture>
                     </a>
-                    <div class="gallery-item__box">
+                    <div class="gallery-item__inner">
                         <blockquote class="gallery-item__comment">
                             <cite class="gallery-item__comment-top">
                                 <b class="gallery-item__author">Максим</b>
@@ -225,7 +230,7 @@
                             <img src="http://placehold.it/150x100" width="150" height="100" alt="Фото №7">
                         </picture>
                     </a>
-                    <div class="gallery-item__box">
+                    <div class="gallery-item__inner">
                         <blockquote class="gallery-item__comment">
                             <cite class="gallery-item__comment-top">
                                 <b class="gallery-item__author">Надежда</b>
@@ -256,30 +261,30 @@
 
         <form class="upload-form" action="https://echo.htmlacademy.ru/" method="post">
             <label class="upload-form__label">
-                <input type="file" class="upload-form__input-file">
+                <input class="upload-form__input-file" type="file">
                 <picture>
                     <img src="http://placehold.it/150x100" width="150" height="100" alt="Фото №8">
                 </picture>
                 <div class="upload-form__wrapper">
-                    <div class="upload-form__box-top">
-                        <div class="upload-form__box-filter upload-form__box-filter--active">
-                            <button type="button" class="upload-form__set-filter-button" title="Кадрировать"></button>
+                    <div class="upload-form__inner-top">
+                        <div class="upload-form__inner-filter upload-form__inner-filter--active">
+                            <button class="upload-form__set-filter-button" type="button" title="Кадрировать"></button>
                             <div class="photo-tweak">
                                 <div class="photo-tweak__scale">
                                     <div class="photo-tweak__circle"></div>
                                 </div>
                             </div>
                         </div>
-                        <div class="upload-form__box-filter">
-                            <button type="button" class="upload-form__set-filter-button" title="Изменить заливку"></button>
+                        <div class="upload-form__inner-filter">
+                            <button class="upload-form__set-filter-button" type="button" title="Изменить заливку"></button>
                             <div class="photo-tweak">
                                 <div class="photo-tweak__scale">
                                     <div class="photo-tweak__circle"></div>
                                 </div>
                             </div>
                         </div>
-                        <div class="upload-form__box-filter">
-                            <button type="button" class="upload-form__set-filter-button" title="Изменить контраст"></button>
+                        <div class="upload-form__inner-filter">
+                            <button class="upload-form__set-filter-button" type="button" title="Изменить контраст"></button>
                             <div class="photo-tweak">
                                 <div class="photo-tweak__scale">
                                     <div class="photo-tweak__circle"></div>
@@ -288,9 +293,9 @@
                         </div>
                     </div>
 
-                    <div class="upload-form__box-bottom">
-                        <button type="submit" class="upload-form__button upload-form__button--post button">Запостить</button>
-                        <button type="submit" class="upload-form__button upload-form__button--cancel button">Отмена</button>
+                    <div class="upload-form__inner-bottom">
+                        <button class="upload-form__button upload-form__button--post button" type="submit">Запостить</button>
+                        <button class="upload-form__button upload-form__button--cancel button" type="submit">Отмена</button>
                     </div>
 
                 </div>
@@ -301,7 +306,11 @@
 
     <footer class="page-footer">
 
-        <a class="logo logo--footer" href="index"></a>
+        <a class="logo logo--footer" href="index.html">
+            <picture>
+                <img src="http://placehold.it/150x100" alt="Логотип Pink">
+            </picture>
+        </a>
         <p class="social">
             <a class="social__link" href="#">Мы в Твиттере</a>
             <a class="social__link" href="#">Мы в Фейсбуке</a>
