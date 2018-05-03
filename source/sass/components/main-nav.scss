@@ -3,6 +3,14 @@
 
     height: 66px;
     overflow: hidden;
+
+    &--open {
+        overflow: inherit;
+    }
+
+    &--nojs {
+        height: auto;
+    }
 }
 
 .main-nav__toggle {
@@ -19,13 +27,16 @@
     right: 20px;
     z-index: 1;
 
+    &--nojs {
+        display: none;
+    }
+
     &::before {
         @include absolute-pseudo-element();
 
         background-color: $first-color;
         box-shadow: 0 10px $first-color,
             0 2px 0 -1px transparentize($first-color, 0.85);
-        transition-duration: $primary-transition-duration;
     
         top: 0;
         left: 0;
@@ -37,7 +48,13 @@
     &:hover::before {
         background-color: $second-color;
         box-shadow: 0 10px $second-color,
-            0 2px 0 -1px transparentize($second-color, 0.85);
+            0 2px 0 -1px transparentize($first-color, 0.85);
+    }
+
+    &:active::before {
+        background-color: transparentize($second-color, 0.85);
+        box-shadow: 0 10px transparentize($second-color, 0.85),
+        0 2px 0 -1px transparentize($first-color, 0.85);
     }
 
     &::after {
@@ -45,9 +62,7 @@
         
         background-color: $first-color;
         box-shadow: 0 -2px 0 -1px transparentize($first-color, 0.85);
-    
-        transition-duration: $primary-transition-duration;
-    
+      
         left: 0;
         bottom: 0;
     
@@ -57,7 +72,49 @@
 
     &:hover::after {
         background-color: $second-color;    
-    }    
+    }   
+
+    &:active::after {
+        background-color: transparentize($second-color, 0.85);    
+    } 
+    
+    &--open {
+        top: 21px;
+        right: 19px;
+
+        width: 24px;
+        height: 23px;
+
+        &::before {
+            border-radius: 2px;
+            box-shadow: none;
+
+            transform: translate(-50%, -50%) rotate(-45deg);
+
+            top: 50%;
+            left: 50%;
+      
+            width: 5px;
+            height: 31px;
+        }
+
+        &:hover::before {
+            box-shadow: none;
+        }
+
+        &::after {
+            border-radius: 2px;
+            box-shadow: none;
+
+            transform: translate(-50%, -50%) rotate(45deg);
+
+            top: 50%;
+            left: 50%;
+
+            width: 5px;
+            height: 31px;
+        }
+    }
 }
 
 .main-nav__list {
