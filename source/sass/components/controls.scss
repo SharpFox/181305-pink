@@ -1,0 +1,63 @@
+.controls {
+    @include flex-center();
+  
+    &--reviews {
+        margin-top: 36px;
+    }
+  
+    &--price {
+        margin-top: 42px;
+    }
+}
+  
+.controls__toggle {
+    padding: 0;
+  
+    font-size: 0;
+    line-height: 0;
+  
+    background-color: transparentize($third-color, 0.7);
+    border: none;
+    border-radius: 50%;
+  
+    transition-duration: $primary-transition-duration;
+  
+    margin-right: 9.5px;
+    margin-left: 9.5px;
+  
+    width: 6px;
+    height: 6px;
+  
+    &:not(&--current):hover {
+        background-color: transparentize($third-color, 0.4);
+    }
+  
+    &:not(&--current):active {
+        background-color: transparentize($third-color, 0.9);
+    }
+  
+    &--current {
+        background-color: $third-color;
+        box-shadow: 0 0 0 3px $sixth-color;
+    }
+}
+    
+@include media_queries_m() {
+    .controls {
+        &--reviews {
+            margin-top: 37px;
+        }
+  
+        &--price {
+            display: none;
+        }
+    }
+}
+  
+@include media_queries_l() {
+    .controls {
+        &--reviews {
+            display: none;
+        }
+    }
+}

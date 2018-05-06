@@ -21,7 +21,7 @@
   line-height: $line-height;
 }
 
-@mixin center() {
+@mixin flex-center() {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,4 +37,11 @@
     padding: 0;
   
     list-style: none;
-  }
+}
+
+@mixin margin-center() {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: auto;
+    margin-left: auto;
+}

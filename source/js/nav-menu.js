@@ -1,28 +1,32 @@
 "use strict";
 
 (function () {
-    var MAIN_NAV = 'main-nav';
-    var MAIN_NAV_OPEN = 'main-nav--open';
-    var MAIN_NAV_TOGGLE = 'main-nav__toggle';
-    var MAIN_NAV_TOGGLE_OPEN = 'main-nav__toggle--open';
+    var MAIN_NAV_CLASS = 'main-nav';
+    var MAIN_NAV_OPEN_CLASS = 'main-nav--open';
+    var MAIN_NAV_TOGGLE_CLASS = 'main-nav__toggle';
+    var MAIN_NAV_TOGGLE_OPEN_CLASS = 'main-nav__toggle--open';
+    var MAIN_NAV_NOJS_CLASS = 'main-nav--nojs';
+    var MAIN_NAV_TOGGLE_NOJS_CLASS = 'main-nav__toggle--nojs';
+    var MAIN_NAV_ITEM_LOGO_OPEN_CLASS = 'main-nav__item--logo-open';
 
-    var MAIN_NAV_NOJS = 'main-nav--nojs';
-    var MAIN_NAV_TOGGLE_NOJS = 'main-nav__toggle--nojs';
+    var navMain = document.querySelector('.' + MAIN_NAV_CLASS);
+    var navMainItemLogo = navMain.querySelector('.' + MAIN_NAV_ITEM_LOGO_OPEN_CLASS);
+    var navToggle = document.querySelector('.' + MAIN_NAV_TOGGLE_CLASS);
 
-    var navMain = document.querySelector('.' + MAIN_NAV);
-    var navToggle = document.querySelector('.' + MAIN_NAV_TOGGLE);
-
-    navMain.classList.remove(MAIN_NAV_NOJS);
-    navToggle.classList.remove(MAIN_NAV_TOGGLE_NOJS);
+    navMain.classList.remove(MAIN_NAV_NOJS_CLASS);
+    navToggle.classList.remove(MAIN_NAV_TOGGLE_NOJS_CLASS);
 
     navToggle.addEventListener('click', function () {
-        if (navMain.classList.contains(MAIN_NAV_OPEN)) {
-            navMain.classList.remove(MAIN_NAV_OPEN);
-            navToggle.classList.remove(MAIN_NAV_TOGGLE_OPEN);
+        if (navMain.classList.contains(MAIN_NAV_OPEN_CLASS)) {
+            navMain.classList.remove(MAIN_NAV_OPEN_CLASS);
+            navToggle.classList.remove(MAIN_NAV_TOGGLE_OPEN_CLASS);
+            navMainItemLogo.classList.add(MAIN_NAV_ITEM_LOGO_OPEN_CLASS);
+
             return;
         }
 
-        navMain.classList.add(MAIN_NAV_OPEN);
-        navToggle.classList.add(MAIN_NAV_TOGGLE_OPEN);
+        navMain.classList.add(MAIN_NAV_OPEN_CLASS);
+        navToggle.classList.add(MAIN_NAV_TOGGLE_OPEN_CLASS);
+        navMainItemLogo.classList.remove(MAIN_NAV_ITEM_LOGO_OPEN_CLASS);
     });
 })();

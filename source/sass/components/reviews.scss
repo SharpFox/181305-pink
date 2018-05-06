@@ -1,0 +1,188 @@
+.reviews {
+    padding-bottom: 45px;
+  }
+  
+.reviews__svg {
+    display: none;
+}
+  
+.reviews__pager {
+    display: none;
+}
+
+.reviews__list {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.reviews__item {
+    margin-top: 42px;
+}
+  
+.reviews__footer {
+    @include font(18px, 30px);
+  
+    font-style: normal;
+    text-align: center;
+}
+  
+.reviews__author {
+    display: block;
+}
+  
+.reviews__author-desc {
+    display: none;
+}
+  
+.reviews__content {
+    @include font(14px, 30px);
+  
+    margin-top: 13px;
+    margin-bottom: 0;
+  
+    text-align: center;
+}  
+
+@include media_queries_m() {
+    .reviews {
+        padding-bottom: 24px;
+    }
+    
+    .reviews__wrapper {
+        @include margin-center();
+    
+        box-sizing: border-box;
+        width: 660px;
+    }
+    
+    .reviews__item {
+        @include flex-center();
+        flex-direction: column;
+
+        margin-top: 26px;
+    }
+    
+    .reviews__footer {
+        order: 1;
+    
+        margin-top: 35px;
+    }
+
+    .reviews__author {
+        @include font(20px, 30px);
+    
+        margin-bottom: 2px;
+    }
+    
+    .reviews__author-desc {
+        display: block;
+
+        @include font(14px, 30px); 
+    }
+    
+    .reviews__content {
+        @include font(18px, 30px);
+    }
+}
+
+@include media_queries_l() {
+    .reviews {
+        position: relative;
+        padding-top: 18px;
+        padding-bottom: 35px;
+    }
+  
+    .reviews__svg {
+        position: absolute;
+    }
+  
+    .reviews__wrapper {
+        @include flex-center();
+        justify-content: space-between;
+        align-items: flex-start;
+
+        width: 960px;
+
+        padding-top: 150px;
+    }
+  
+    .reviews__pager {
+        @include font(0, 0);
+    
+        position: relative;
+    
+        display: block;
+        margin-top: 45px;
+    
+        background-color: transparent;
+        border: none;
+    
+        width: 22px;
+        height: 41px;
+    
+        &::before {
+            @include absolute-pseudo-element();
+    
+            top: 5px;
+    
+            box-sizing: border-box;
+            border-width: 2px;
+            border-style: solid;
+            border-color: transparentize($third-color, 0.7);
+            transform: rotate(45deg);
+    
+            transition-property: border-color;
+            transition-duration: $primary-transition-duration;
+    
+            width: 30px;
+            height: 32px;
+        }
+  
+        &:hover::before {
+            border-color: transparentize($third-color, 0.4);
+        }
+  
+        &:active::before {
+            border-color: transparentize($third-color, 0.9);
+        }
+  
+        &--prev {
+            margin-left: 11px;
+  
+            &::before {
+                right: -14px;
+        
+                border-top: transparent;
+                border-right: transparent;
+            }
+        }
+  
+        &--next {
+            margin-right: 11px;
+  
+            &::before {
+                left: -14px;
+    
+                border-left: transparent;
+                border-bottom: transparent;
+            }
+        }
+    }
+  
+    .reviews__item {
+        margin-top: 4px;
+        width: 700px;
+    }
+  
+    .reviews__footer {
+        margin-top: 36px;
+    }
+  
+    .reviews__author {
+        @include font(24px, 30px);
+    }
+  
+    .reviews__author-desc {
+        @include font(18px, 30px);
+    }
+}

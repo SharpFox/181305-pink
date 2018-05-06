@@ -1,0 +1,24 @@
+.button {
+    @include font-set(700, 18px, 18px);
+
+    box-sizing: border-box;
+
+    color: $first-color;
+    border: 3px solid $first-color;
+
+    border-radius: 50px;
+
+    text-align: center;
+    text-decoration: none;
+
+    padding-top: 17px;
+    padding-bottom: 18px;
+    padding-left: 36px;
+    padding-right: 35px;
+}
+
+@include media_queries_l() {
+    .btn {
+      @include font(21px, 18px);
+    }
+}

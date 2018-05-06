@@ -1,5 +1,5 @@
 .social {
-    @include center();
+    @include flex-center();
 
     box-sizing: border-box;
 
@@ -32,7 +32,18 @@
 
     &:active {
         opacity: 0.1;
-    }
+    }    
+}
+
+.social__svg {
+    @include absolute-pseudo-element();
+    
+    top: 50%;
+    left: 50%;
+
+    fill: $second-color;
+
+    transform: translate(-50%, -50%);
 }
 
 @include media_queries_m() {

@@ -1,0 +1,131 @@
+.advantages__main-title {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    padding-top: 40px;
+    padding-bottom: 36px;
+
+    @include font-set(400, 24px, 29px);
+    text-align: center;
+}
+
+.advantages__wrapper {
+    width: 280px;   
+
+    padding-right: 20px;
+    padding-left: 20px;
+
+    @include margin-center();
+}
+
+.advantages__span {
+    display: block; 
+
+    width: 260px;
+
+    @include margin-center();
+
+    &--top {
+        margin-bottom: 39px;    
+    }
+}
+
+.advantages__list {
+    @include clear-list();
+
+    padding-top: 86px;
+    padding-bottom: 284px;
+}
+
+.advantages__item {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.advantages__title {
+    @include font(18px, 18px);
+}
+
+.advantages__content {
+    @include font(14px, 24px);
+
+    margin-bottom: 0;
+}
+
+@include media_queries_m() {
+    .advantages__main-title {
+        padding-top: 40px;
+        padding-bottom: 36px;
+
+        @include font-set(400, 40px, 48px);
+        text-align: center;  
+    } 
+
+    .advantages__span {
+        &--top {
+            width: 620px;
+            margin-bottom: 0;
+        }
+      
+        &--bottom {
+            width: 360px;
+        }
+    }
+
+    .advantages__wrapper {
+        @include margin-center();
+        
+        width: 620px;
+    }
+
+    .advantages__list {
+        width: 50%;
+
+        margin-left: auto;
+        padding-top: 76px;
+        padding-left: 0;
+        padding-bottom: 3px;  
+      }
+
+    .advantages__item {
+        text-align: left;
+    }
+
+    .advantages__content {
+        @include font(14px, 24px);    
+    }
+}
+
+@include media_queries_l() {
+    .advantages__wrapper {
+        width: 940px;
+    }
+
+    .advantages__list {
+        @include flex-center();
+        justify-content: space-around;
+        align-items: flex-start;
+
+        width: 940px;
+        min-height: 560px;
+    }
+
+    .advantages__item {
+        padding-top: 368px;
+
+        text-align: center;
+
+        width: 290px;
+    }
+
+    .advantages__title {
+        @include font(30px, 30px);
+    }
+  
+    .advantages__content {
+        @include font(18px, 30px);
+
+        padding-right: 24px;
+        padding-left: 24px;
+    }
+}
