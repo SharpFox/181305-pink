@@ -187,7 +187,7 @@
 
         &--feature-title {
             display: table-cell;
-    
+
             font-size: 14px;
             text-transform: none;
         }
@@ -196,7 +196,7 @@
             &::before {
                 top: 0;
                 right: 50%;
-        
+
                 transform: translate(50%, 67%) rotate(-45deg);
             }
         }
@@ -205,14 +205,14 @@
             &::before {
                 top: 20px;
                 left: 50%;
-        
+
                 transform: translate(-50%) rotate(-44deg);
             }
 
             &::after {
                 top: 20px;
                 left: 50%;
-        
+
                 transform: translate(-50%) rotate(45deg);
             }
         }

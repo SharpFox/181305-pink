@@ -31,7 +31,7 @@
 .promo-text__span {
         display: none;
 }
-  
+
 @include media_queries_m() {
     .promo-text {
         padding-right: 100px;

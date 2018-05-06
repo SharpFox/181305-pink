@@ -110,13 +110,13 @@
 
         &:hover {
             color: $first-color;
-    
+
             background-color: $second-color;
         }
 
         &:active {
             color: transparentize($first-color, 0.7);
-    
+
             background-color: $second-color;
         }
     }
@@ -225,7 +225,7 @@
 
     .upload-form__btn {
         padding-left: 25px;
-    
+
         &--cancel {
             margin-top: 24px;
         }
@@ -235,7 +235,7 @@
 @include media_queries_l() {
     .upload-form {
         @include margin-center();
-    
+
         width: 940px;
         margin-bottom: 28px;
         padding-top: 52px;

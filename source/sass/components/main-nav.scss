@@ -48,7 +48,7 @@
     &:hover::before {
         background-color: $second-color;
         box-shadow: 0 10px $second-color,
-            0 2px 0 -1px transparentize($first-color, 0.85);        
+            0 2px 0 -1px transparentize($first-color, 0.85);
     }
 
     &:active::before {
@@ -71,7 +71,7 @@
     }
 
     &:hover::after {
-        background-color: $second-color;    
+        background-color: $second-color;
     }
 
     &:active::after {
@@ -154,7 +154,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
     min-height: 64px;
 
     @include font-set(700, 18px, 32px);
@@ -171,7 +171,7 @@
     }
 
     &:not(&--active):active {
-       color: transparentize($first-color, 0.7)
+       color: transparentize($first-color, 0.7);
     }
 }
 
