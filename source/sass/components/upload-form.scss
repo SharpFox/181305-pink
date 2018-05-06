@@ -130,13 +130,13 @@
 
         &:hover {
             color: transparentize($sixth-color, 0.7);
-    
+
             border-color: transparentize($sixth-color, 0.7);
         }
 
         &:active {
             color: transparentize($first-color, 0.7);
-    
+
             background-color: transparentize($sixth-color, 0.7);
             border-color: transparentize($sixth-color, 1);
         }
@@ -168,7 +168,7 @@
         justify-content: space-between;
         align-items: center;
         padding: 0;
-    
+
         border-bottom: none;
     }
 
@@ -180,9 +180,9 @@
         width: 100%;
         margin-bottom: 12px;
         padding-bottom: 14px;
-    
+
         border-bottom: 1px solid transparentize($sixth-color, 0.9);
-    
+
         &:last-of-type {
             padding-bottom: 17px;
         }
@@ -200,7 +200,7 @@
         margin-left: 3px;
         margin-top: 10px;
         margin-bottom: 10px;
-    
+
         fill: $second-color;
 
         &--crop {
@@ -266,7 +266,7 @@
         width: 100%;
         margin-bottom: 15px;
         padding-bottom: 5px;
-    
+
         border-bottom: 1px solid transparentize($sixth-color, 0.9);
     }
 
@@ -282,7 +282,7 @@
         margin-left: 0;
         margin-top: 0;
         margin-bottom: 0;
-    
+
         fill: $second-color;
 
         &--crop {
@@ -307,7 +307,7 @@
 
     .upload-form__btn {
         @include font(18px, 18px);
-    
+
         width: 44.5%;
         margin-top: auto;
         padding-right: 0;

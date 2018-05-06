@@ -32,12 +32,12 @@
 
     &:active {
         opacity: 0.1;
-    }    
+    }
 }
 
 .social__svg {
     @include absolute-pseudo-element();
-    
+
     top: 50%;
     left: 50%;
 
@@ -55,6 +55,6 @@
 @include media_queries_l() {
     .social {
         margin-left: 151px;
-        margin-right: 150px;    
-    }   
+        margin-right: 150px;
+    }
 }

@@ -1,21 +1,21 @@
 .popup {
     display: none;
     box-shadow: 0 7px 30px 0 rgba($seventeenth-color, 0.15);
-  
+
     margin: 0 auto;
-    
+
     padding-top: 43px;
     padding-bottom: 50px;
     text-align: center;
-  
+
     width: 320px;
 }
-  
+
 .popup--success {
     padding-top: 45px;
     padding-bottom: 0;
 }
-  
+
 .popup__title {
     color: $seventeenth-color;
     font-family: $font-primary;
@@ -24,7 +24,7 @@
     line-height: 24px;
     margin-bottom: 37px;
 }
-  
+
 .popup__description {
     line-height: 24px;
     margin-left: 20px;
@@ -32,99 +32,98 @@
     margin-bottom: 37px;
     margin-top: 0;
 }
-  
+
 .popup__close {
     display: block;
-  
+
     border: none;
     border-radius: 2px;
     background-color: $ninth-color;
-  
+
     font-family: $font-primary;
     font-weight: 700;
     font-size: 18px;
     line-height: 30px;
-  
+
     margin: 0 auto;
     height: 63px;
     text-align: center;
     text-transform: uppercase;
     color: $first-color;
     width: 280px;
-  
+
     &:hover {
       background-color: $fifteenth-color;
     }
-  
+
     &:active {
       color: transparentize($first-color, 0.7);
     }
-  
+
     &:disabled {
       color: $first-color;
       background-color: $eighth-color;
     }
 }
-  
+
 .popup__background {
     background-color: $twenty-third-color;
     padding-top: 48px;
     padding-bottom: 52px;
 }
-  
+
 @include media_queries_m() {
     .popup {
         box-sizing: border-box;
-    
+
         padding-top: 40px;
         padding-bottom: 52px;
         width: 460px;
     }
-  
+
     .popup--success {
         padding-top: 45px;
         padding-bottom: 0;
     }
-  
+
     .popup__title {
         font-size: 30px;
         line-height: 40px;
-    
+
         margin-left: 70px;
         margin-right: 70px;
         margin-bottom: 22px;
     }
-  
+
     .popup__description {
         font-size: 18px;
-    
+
         margin-left: 70px;
         margin-right: 70px;
         margin-top: 0;
         margin-bottom: 38px;
     }
-  
+
     .popup__close {
         width: 300px;
     }
 }
-  
+
 @include media_queries_l() {
     .popup {
         padding-top: 45px;
     }
-  
+
     .popup--success {
         width: 780px;
     }
-  
+
     .popup__close--success {
         width: 460px;
     }
-  
+
     .popup__description--success {
         margin-left: 190px;
         margin-right: 190px;
     }
   }
-  

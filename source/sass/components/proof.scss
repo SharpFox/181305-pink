@@ -20,25 +20,25 @@
         position: relative;
 
         width: 50%;
-        
+
         margin-left: auto;
 
         &::after {
             @include font-set(700, 96px, 163px);
-      
+
             content: "24";
             position: absolute;
             top: 20px;
             left: -291px;
-      
+
             box-sizing: border-box;
             width: 202px;
             height: 202px;
-      
+
             color: $second-color;
             text-align: center;
             vertical-align: middle;
-      
+
             border: 13px solid $second-color;
             border-radius: 50%;
         }
@@ -46,21 +46,21 @@
 
     .proof__title {
         @include font-set(700, 30px, 36px);
-    
+
         margin-top: 36px;
         margin-bottom: 0;
-    
+
         width: 200px;
     }
 
     .proof__text {
         @include font(14px, 24px);
-    
+
         margin-top: 10px;
         margin-bottom: 10px;
         padding-right: 10px;
     }
-    
+
     .proof__link {
         @include font(14px, 24px);
     
@@ -72,34 +72,34 @@
 @include media_queries_l() {
     .proof__wrapper {
         width: 940px;
-    
+
         padding-left: 130px;
         padding-right: 130px;
     }
 
     .proof__inner {
         position: relative;
-        
+
         width: 60.64%;
-        
+
         margin-left: auto;
 
         &::after {
             @include font(120px, 205px);
-      
+
             content: "24";
-      
+
             box-sizing: border-box;
             position: absolute;
-      
+
             border-width: 17px;
             color: $second-color;
             text-align: center;
             vertical-align: middle;
-      
+
             top: -20px;
             left: -343px;
-      
+
             height: 253px;
       
             width: 253px;
@@ -108,20 +108,20 @@
 
     .proof__title {
         @include font-set(700, 30px, 36px);
-    
+
         margin-top: 91px;
         margin-bottom: 0;
         width: 100%;
     }
-    
+
     .proof__text {
         @include font(18px, 30px);
-    
+
         margin-top: 21px;
         margin-bottom: 30px;
         padding-right: 10px;
     }
-    
+
     .proof__link {
         @include font(18px, 30px);
     }
