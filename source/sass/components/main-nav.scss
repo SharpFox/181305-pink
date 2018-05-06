@@ -171,7 +171,7 @@
     }
 
     &:not(&--active):active {
-       color: transparentize($first-color, 0.7);
+        color: transparentize($first-color, 0.7);
     }
 }
 
