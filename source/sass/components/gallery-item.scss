@@ -4,24 +4,24 @@
         position: relative;
 
         width: 100%;
-    
-        &::before {        
-            content: "Панорама дня";    
+
+        &::before {  
+            content: "Панорама дня";
             position: absolute;
 
             max-width: 35%;
 
             top: 0;
             right: 6.25%;
-    
+
             padding-top: 6px;
             padding-right: 20px;
             padding-bottom: 6px;
             padding-left: 19px;
-    
+
             @include font-set(700, 12px, 24px);
             color: $first-color;
-            text-transform: uppercase;            
+            text-transform: uppercase;
 
             background-color: $second-color;
         }
@@ -30,13 +30,13 @@
 
 .gallery-item__link {
     box-sizing: border-box;
-  
+
     display: block;
-  
+
     font-size: 0;
     line-height: 3px;
-  
-    &--famous {    
+
+    &--famous {
         height: 137px;
         width: 100%;
 
@@ -48,28 +48,28 @@
     box-sizing: border-box;
 
     width: 100%;
-  
+
     padding-right: 18px;
     padding-left: 20px;
 }
 
 .gallery-item__comment {
     box-sizing: border-box;
-   
+
     width: 100%;
-  
+
     margin: 0;
     margin-bottom: 20px;
-  
+
     padding-top: 18px;
     padding-bottom: 19px;
     padding-left: 18px;
 
     background-color: $twenty-third-color;
-  
+
     &--famous {
         box-sizing: border-box;
-    
+
         width: 100%;
     }
 }
@@ -78,40 +78,40 @@
     @include font-set(700, 14px, 24px);
     font-style: normal;
 }
-  
+
 .gallery-item__comment-footer {
     margin-top: 9px;
 }
-  
+
 .gallery-item__time {
     @include font-set(300, 12px, 24px);
-  
+
     text-transform: uppercase;
 }
-  
-.gallery-item__text { 
+
+.gallery-item__text {
     margin: 0;
 
     @include font(14px, 24px);
 }
-  
+
 .gallery-item__like-btn {
     padding: 0;
 
     margin-right: 15px;
-  
+
     font-size: 0;
-  
+
     background: transparent;
     border: none;
 }
-  
+
 .gallery-item__like-count {
     @include font(12px, 24px);
-    color: $second-color;  
+    color: $second-color;
     text-transform: uppercase;
 }
-  
+
 .gallery-item__svg-heart {
     margin-top: 5px;
 
@@ -122,131 +122,130 @@
     .gallery-item {
         @include flex-center();
         flex-direction: column;
-    
+
         width: 46.8%;
 
         margin-right: 10px;
-        margin-left: 10px;      
-    
-        &--famous {  
+        margin-left: 10px;
+
+        &--famous {
             width: 100%;
 
             margin-right: 0;
             margin-left: 0;
-    
+
             &::before {
                 top: 57px;
                 right: 3%;
             }
         }
     }
-  
+
     .gallery-item__link {
         &--famous {
             width: 100%;
-            height: 509px; 
+            height: 509px;
         }
     }
-  
+
     .gallery-item__comment {
         @include flex-center();
         flex-direction: column;
         flex-grow: 1;
-    
+
         min-height: 155px;
         margin-bottom: 20px;
-    
+
         padding-top: 24px;
         padding-right: 16px;
         padding-bottom: 21px;
         padding-left: 27px;
-    
+
         &--famous {
             box-sizing: border-box;
-    
+
             @include flex-center();
             justify-content: space-between;
             flex-direction: row;
             flex-wrap: wrap;
-    
+
             min-height: auto;
-    
+
             margin-bottom: 50px;
             padding-bottom: 24px;
-    
+
             width: 100%;
         }
     }
-  
+
     .gallery-item__comment-footer {
         @include flex-center();
         justify-content: space-between;
-  
+
         margin-top: auto;
     }
-  
+
     .gallery-item__text {
         margin-bottom: 13px;
-    
+
         &--famous {
             order: 1;
-    
+
             margin-bottom: 0;
         }
     }
-  
+
     .gallery-item__like-btn {
         order: 1;
         margin-left: 17px;
     }
-  
+
     .gallery-item__svg-heart {
         margin-top: 0;
     }
-  }
+}
 
 @include media_queries_l() {
     .gallery-item {
         width: 300px;
-    
+
         &--famous {
             width: 100%;
-    
+
             &::before {
             top: 54px;
             right: 10.8%;
             }
         }
     }
-  
+
     .gallery-item__link {
         &--famous {
             width: 100%;
             height: 506px;
         }
     }
-  
+
     .gallery-item__comment {
         margin-bottom: 54px;
-    
+
         padding-right: 16px;
         padding-left: 27px;
-    
+
         &--famous {
             @include margin-center();
-    
+
             margin-bottom: 50px;
             padding-bottom: 23px;
-    
+
             width: 940px;
         }
     }
-  
+
     .gallery-item__comment-footer {
         @include flex-center();
         justify-content: space-between;
-        
+
         margin-top: auto;
     }
 }
-  

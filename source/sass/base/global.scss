@@ -3,11 +3,11 @@ body {
     font-family: $font-primary;
     margin: 0;
   }
-  
+
   img {
     width: 100%;
   }
-  
+
   .visually-hidden {
     position: absolute;
     clip: rect(0 0 0 0);
@@ -15,4 +15,3 @@ body {
     height: 1px;
     margin: -1px;
   }
-  

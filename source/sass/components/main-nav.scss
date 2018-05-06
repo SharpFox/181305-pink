@@ -7,7 +7,7 @@
     &--open {
         overflow: inherit;
     }
- 
+
     &--nojs {
         height: auto;
     }
@@ -37,10 +37,10 @@
         background-color: $first-color;
         box-shadow: 0 10px $first-color,
             0 2px 0 -1px transparentize($first-color, 0.85);
-    
+
         top: 0;
         left: 0;
-    
+
         width: 50px;
         height: 4px;
     }
@@ -59,25 +59,25 @@
 
     &::after {
         @include absolute-pseudo-element();
-        
+
         background-color: $first-color;
         box-shadow: 0 -2px 0 -1px transparentize($first-color, 0.85);
-      
+
         left: 0;
         bottom: 0;
-    
+
         width: 50px;
-        height: 4px;       
+        height: 4px;
     }
 
     &:hover::after {
         background-color: $second-color;    
-    }   
+    }
 
     &:active::after {
-        background-color: transparentize($second-color, 0.85);    
-    } 
-    
+        background-color: transparentize($second-color, 0.85);
+    }
+
     &--open {
         top: 21px;
         right: 19px;
@@ -93,7 +93,7 @@
 
             top: 50%;
             left: 50%;
-      
+
             width: 5px;
             height: 31px;
         }
@@ -136,7 +136,7 @@
     background-color: $sixth-color;
 
     &--open {
-        transition-duration: 1s;    
+        transition-duration: $primary-transition-duration;
     }
 }
 
@@ -182,7 +182,7 @@
         &--open {
             margin: 0;
         }
-      
+
         &--nojs {
             height: auto;
         }
@@ -191,16 +191,16 @@
     .main-nav__toggle {
         top: 45px;
     }
-    
+
     .main-nav__item--logo {
         min-height: 110px;
         padding-top: 27px;
         padding-left: 20px;
-    
+
         box-shadow: inset 0 -1px $seventeenth-color,
           inset 0 1px transparentize($first-color, 0.85);
     }
-    
+
     .main-nav__item--logo-open {
         box-shadow: none;
     }
@@ -208,7 +208,7 @@
 
 @include media_queries_l() {
     .main-nav {
-        @include flex-center();   
+        @include flex-center();
         flex-direction: row;
 
         background-color: transparentize($seventeenth-color, 0.85);
@@ -224,7 +224,7 @@
         @include flex-center();
 
         width: 940px;
-        min-height: 110px;    
+        min-height: 110px;
 
         padding-right: 10px;
         padding-left: 10px;
@@ -232,7 +232,7 @@
 
     .main-nav__item {
         background-color: transparent;
-        box-shadow: none;     
+        box-shadow: none;
 
         display: flex;
         align-items: center;

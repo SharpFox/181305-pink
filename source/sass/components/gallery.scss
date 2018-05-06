@@ -1,7 +1,7 @@
 .gallery {
     width: 100%;
 }
-  
+
 .gallery__wrapper {
     width: 100%;
 
@@ -12,24 +12,23 @@
     padding-right: 20px;
     padding-left: 20px;
 }
-  
+
 @include media_queries_m() {
     .gallery__wrapper {
-        @include flex-center();      
+        @include flex-center();
         justify-content: center;
         flex-wrap: wrap;
-    
+
         padding-right: 10px;
         padding-left: 10px;
     }
 }
-  
+
 @include media_queries_l() {
     .gallery__wrapper {
         width: 960px;
-        
+
         padding-right: 0;
         padding-left: 0;
     }
 }
-  
