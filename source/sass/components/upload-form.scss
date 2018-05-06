@@ -1,0 +1,317 @@
+.upload-form {
+    box-sizing: border-box;
+    background: $twenty-third-color;
+    padding-top: 20px;
+  
+    width: 100%;
+}
+  
+.upload-form__set-filter-btn {
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+  
+.upload-form__label {
+    position: relative;
+  
+    display: block;
+    margin-right: 22px;
+    margin-left: 18px;
+    font-size: 0;
+}
+  
+.upload-form__input-file {
+    position: absolute;
+  
+    width: 100%;
+    height: 100%;
+  
+    opacity: 0;
+}
+  
+.upload-form__wrapper {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 363px;
+}
+  
+.upload-form__inner-top {
+    position: relative;
+  
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 42px;
+    padding-right: 20px;
+    padding-bottom: 68px;
+    padding-left: 20px;
+  
+    border-bottom: 1px solid transparentize($sixth-color, 0.9);
+}
+  
+.upload-form__inner-filter {
+    &--active .upload-form__svg {
+      fill: $second-color;
+    }
+  
+    &--active .range {
+      display: block;
+    }
+}
+  
+.upload-form__svg {
+    fill: transparentize($sixth-color, 0.7);
+    transition-duration: $primary-transition-duration;
+  
+    &--crop {
+        margin-top: -2px;
+        margin-right: 2px;
+    }
+  
+    &--fill {
+        margin-right: 40px;
+        margin-left: 30px;
+    }
+  
+    &--contrast {
+        align-self: center;
+        margin-top: 6px;
+        margin-right: 12px;
+    }
+  
+    &:hover {
+        fill: transparentize($sixth-color, 0.5);
+    }
+  
+    &:active {
+        fill: $second-color;
+    }
+}
+  
+.upload-form__inner-bottom {
+    padding-top: 38px;
+    padding-right: 22px;
+    padding-bottom: 41px;
+    padding-left: 18px;
+}
+  
+.upload-form__btn {
+    background-color: transparent;
+    border-width: 3px;
+    border-style: solid;
+    transition-duration: $primary-transition-duration;
+  
+    &--post {
+        color: $second-color;
+    
+        border-color: $second-color;
+    
+        &:hover {
+            color: $first-color;
+    
+            background-color: $second-color;
+        }
+    
+        &:active {
+            color: transparentize($first-color, 0.7);
+    
+            background-color: $second-color;
+        }
+    }
+  
+    &--cancel {
+        margin-top: 12px;
+    
+        color: transparentize($sixth-color, 0.9);
+    
+        border-color: transparentize($sixth-color, 0.9);
+    
+        &:hover {
+            color: transparentize($sixth-color, 0.7);
+    
+            border-color: transparentize($sixth-color, 0.7);
+        }
+    
+        &:active {
+            color: transparentize($first-color, 0.7);
+    
+            background-color: transparentize($sixth-color, 0.7);
+            border-color: transparentize($sixth-color, 1);
+        }
+    }
+}
+  
+@include media_queries_m() {
+    .upload-form {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 56px;
+        padding-right: 20px;
+        padding-bottom: 54px;
+    }
+  
+    .upload-form__label {
+        width: 46.9%;
+        margin-top: 1px;
+        margin-right: 0;
+    }
+  
+    .upload-form__wrapper {
+        width: 42.9%;
+        min-height: 363px;
+    }
+  
+    .upload-form__inner-top {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+    
+        border-bottom: none;
+    }
+  
+    .upload-form__inner-filter {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        width: 100%;
+        margin-bottom: 12px;
+        padding-bottom: 14px;
+    
+        border-bottom: 1px solid transparentize($sixth-color, 0.9);
+    
+        &:last-of-type {
+            padding-bottom: 17px;
+        }
+    }
+  
+    .upload-form__inner-bottom {
+        padding-top: 51px;
+        padding-right: 13px;
+        padding-bottom: 0;
+        padding-left: 2px;
+    }
+  
+    .upload-form__svg {
+        margin: 0;
+        margin-left: 3px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    
+        fill: $second-color;
+    
+        &--crop {
+            width: 22px;
+            height: 22px;
+            margin-right: 30px;
+        }
+    
+        &--fill {
+            width: 24px;
+            height: 22px;
+            margin-right: 28px;
+        }
+    
+        &--contrast {
+            width: 16px;
+            height: 16px;
+            margin-left: 8px;
+            margin-right: 30px;
+        }
+    }
+  
+    .upload-form__btn {
+        padding-left: 25px;
+    
+        &--cancel {
+            margin-top: 24px;
+        }
+    }
+  }
+  
+  @include media_queries_l() {
+    .upload-form {
+        @include margin-center();
+    
+        width: 940px;
+        margin-bottom: 28px;
+        padding-top: 52px;
+        padding-right: 60px;
+        padding-bottom: 57px;
+        padding-left: 80px;
+    }
+  
+    .upload-form__label {
+        width: 300px;
+        margin-right: 90px;
+        margin-top: 5px;
+        margin-left: 0;
+    }
+  
+    .upload-form__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 410px;
+    }
+  
+    .upload-form__inner-filter {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        width: 100%;
+        margin-bottom: 15px;
+        padding-bottom: 5px;
+    
+        border-bottom: 1px solid transparentize($sixth-color, 0.9);
+    }
+  
+    .upload-form__inner-bottom {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 0;
+        padding-right: 0;
+    }
+  
+    .upload-form__svg {
+        margin: 0;
+        margin-left: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+    
+        fill: $second-color;
+    
+        &--crop {
+            width: 50px;
+            height: 50px;
+            margin-right: 45px;
+        }
+    
+        &--fill {
+            width: 52px;
+            height: 48px;
+            margin-right: 43px;
+        }
+    
+        &--contrast {
+            width: 34px;
+            height: 34px;
+            margin-left: 8px;
+            margin-right: 52px;
+        }
+    }
+  
+    .upload-form__btn {
+        @include font(18px, 18px);
+    
+        width: 44.5%;
+        margin-top: auto;
+        padding-right: 0;
+        padding-left: 0;
+    }
+  }
+  
