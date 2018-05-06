@@ -1,13 +1,13 @@
 @mixin media_queries_m() {
-    @media only screen and (min-width: $midle) {
-        @content;
-    }
+  @media only screen and (min-width: $midle) {
+    @content;
+  }
 }
 
 @mixin media_queries_l() {
-    @media only screen and (min-width: $long) {
-        @content;
-    }
+  @media only screen and (min-width: $long) {
+    @content;
+  }
 }
 
 @mixin font($size, $line-height) {
@@ -28,20 +28,20 @@
 }
 
 @mixin absolute-pseudo-element() {
-    content: "";
-    position: absolute;
+  content: "";
+  position: absolute;
 }
 
 @mixin clear-list() {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 
-    list-style: none;
+  list-style: none;
 }
 
 @mixin margin-center() {
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-right: auto;
-    margin-left: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: auto;
+  margin-left: auto;
 }

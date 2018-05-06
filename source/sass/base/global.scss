@@ -1,17 +1,17 @@
 body {
-    color: $sixth-color;
-    font-family: $font-primary;
-    margin: 0;
-  }
+  color: $sixth-color;
+  font-family: $font-primary;
+  margin: 0;
+}
 
-  img {
-    width: 100%;
-  }
+img {
+  width: 100%;
+}
 
-  .visually-hidden {
-    position: absolute;
-    clip: rect(0 0 0 0);
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-  }
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
