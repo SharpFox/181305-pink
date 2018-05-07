@@ -1,128 +1,130 @@
 .proof {
-    display: none;
+  display: none;
 }
 
 @include media_queries_m() {
-    .proof {
-      @include flex-center();
+  .proof {
+    @include flex-center();
+  }
+
+  .proof__wrapper {
+    width: 620px;
+
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 86px;
+  }
+
+  .proof__inner {
+    position: relative;
+
+    width: 50%;
+
+    margin-left: auto;
+
+    &::after {
+      box-sizing: border-box;
+
+      content: "24";
+      position: absolute;
+
+      top: 20px;
+      left: -291px;
+
+
+      width: 202px;
+      height: 202px;
+
+      @include font-set(700, 96px, 163px);
+      color: $second-color;
+      text-align: center;
+      vertical-align: middle;
+
+      border: 13px solid $second-color;
+      border-radius: 50%;
     }
+  }
 
-    .proof__wrapper {
-        width: 620px;
+  .proof__title {
+    width: 200px;
 
-        padding-left: 20px;
-        padding-right: 20px;
+    margin-top: 36px;
+    margin-bottom: 0;
 
-        padding-bottom: 86px;
-    }
+    @include font-set(700, 30px, 36px);
+  }
 
-    .proof__inner {
-        position: relative;
+  .proof__text {
+    padding-right: 10px;
 
-        width: 50%;
+    margin-top: 10px;
+    margin-bottom: 10px;
 
-        margin-left: auto;
+    @include font(14px, 24px);
+  }
 
-        &::after {
-            @include font-set(700, 96px, 163px);
-
-            content: "24";
-            position: absolute;
-            top: 20px;
-            left: -291px;
-
-            box-sizing: border-box;
-            width: 202px;
-            height: 202px;
-
-            color: $second-color;
-            text-align: center;
-            vertical-align: middle;
-
-            border: 13px solid $second-color;
-            border-radius: 50%;
-        }
-    }
-
-    .proof__title {
-        @include font-set(700, 30px, 36px);
-
-        margin-top: 36px;
-        margin-bottom: 0;
-
-        width: 200px;
-    }
-
-    .proof__text {
-        @include font(14px, 24px);
-
-        margin-top: 10px;
-        margin-bottom: 10px;
-        padding-right: 10px;
-    }
-
-    .proof__link {
-        @include font(14px, 24px);
-
-        color: $second-color;
-        text-decoration: underline;
-    }
+  .proof__link {
+    @include font(14px, 24px);
+    color: $second-color;
+    text-decoration: underline;
+  }
 }
 
 @include media_queries_l() {
-    .proof__wrapper {
-        width: 940px;
+  .proof__wrapper {
+    width: 940px;
 
-        padding-left: 130px;
-        padding-right: 130px;
+    padding-left: 130px;
+    padding-right: 130px;
+  }
+
+  .proof__inner {
+    position: relative;
+
+    width: 60.64%;
+
+    margin-left: auto;
+
+    &::after {
+      content: "24";
+      position: absolute;
+
+      box-sizing: border-box;
+
+      top: -20px;
+      left: -343px;
+
+      height: 253px;
+      width: 253px;
+
+      @include font(120px, 205px);
+      color: $second-color;
+      text-align: center;
+      vertical-align: middle;
+
+      border-width: 17px;
     }
+  }
 
-    .proof__inner {
-        position: relative;
+  .proof__title {    
+    width: 100%;
 
-        width: 60.64%;
+    margin-top: 91px;
+    margin-bottom: 0;
 
-        margin-left: auto;
+    @include font-set(700, 30px, 36px);
+  }
 
-        &::after {
-            @include font(120px, 205px);
+  .proof__text {
+    padding-right: 10px;
 
-            content: "24";
+    margin-top: 21px;
+    margin-bottom: 30px;
 
-            box-sizing: border-box;
-            position: absolute;
+    @include font(18px, 30px);
+  }
 
-            border-width: 17px;
-            color: $second-color;
-            text-align: center;
-            vertical-align: middle;
-
-            top: -20px;
-            left: -343px;
-
-            height: 253px;
-
-            width: 253px;
-        }
-    }
-
-    .proof__title {
-        @include font-set(700, 30px, 36px);
-
-        margin-top: 91px;
-        margin-bottom: 0;
-        width: 100%;
-    }
-
-    .proof__text {
-        @include font(18px, 30px);
-
-        margin-top: 21px;
-        margin-bottom: 30px;
-        padding-right: 10px;
-    }
-
-    .proof__link {
-        @include font(18px, 30px);
-    }
+  .proof__link {
+    @include font(18px, 30px);
+  }
 }

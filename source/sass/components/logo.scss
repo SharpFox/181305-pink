@@ -1,18 +1,18 @@
 .logo {
-    display: block;
+  display: block;
 
-    width: 75px;
-    height: 22px;
+  width: 75px;
+  height: 22px;
 
-    &--footer {
-        width: 147px;
-        height: 40px;
-    }
+  &--footer {
+    width: 147px;
+    height: 40px;
+  }
 }
 
 @include media_queries_m() {
-    .logo {
-        width: 147px;
-        height: 40px;
-    }
+  .logo {
+    width: 147px;
+    height: 40px;
+  }
 }

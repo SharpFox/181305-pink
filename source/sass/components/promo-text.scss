@@ -1,89 +1,89 @@
 .promo-text {
-    box-sizing: border-box;
+  box-sizing: border-box;
 
-    margin: 0;
+  padding-right: 30px;
+  padding-left: 30px;
 
-    padding-right: 30px;
-    padding-left: 30px;
+  margin: 0;
 
-    @include font(14px, 30px);
-    text-align: center;
+  @include font(14px, 30px);
+  text-align: center;
 
-    &--top {
-        padding-top: 45px;
-        padding-bottom: 49px;
-    }
+  &--top {
+    padding-top: 45px;
+    padding-bottom: 49px;
+  }
 
-    &--bottom {
-        padding-top: 23px;
-        padding-bottom: 42px;
-        padding-left: 26px;
-    }
+  &--bottom {
+    padding-top: 23px;
+    padding-bottom: 42px;
+    padding-left: 26px;
+  }
 
-    &--form {
-        padding-top: 45px;
-        padding-right: 20px;
-        padding-bottom: 34px;
-        padding-left: 20px;
-    }
+  &--form {
+    padding-top: 45px;
+    padding-right: 20px;
+    padding-bottom: 34px;
+    padding-left: 20px;
+  }
 }
 
 .promo-text__span {
-        display: none;
+  display: none;
 }
 
 @include media_queries_m() {
-    .promo-text {
-        padding-right: 100px;
-        padding-left: 100px;
+  .promo-text {
+    padding-right: 100px;
+    padding-left: 100px;
 
-        font-size: 18px;
+    font-size: 18px;
 
-        &--top {
-            padding-top: 92px;
-            padding-bottom: 76px;
-        }
-
-        &--bottom {
-            padding-top: 45px;
-            padding-bottom: 69px;
-        }
-
-        &--form {
-            padding-top: 92px;
-            padding-right: 80px;
-            padding-bottom: 72px;
-            padding-left: 80px;
-        }
+    &--top {
+      padding-top: 92px;
+      padding-bottom: 76px;
     }
 
-    .promo-text__span {
-      display: inline;
+    &--bottom {
+      padding-top: 45px;
+      padding-bottom: 69px;
     }
+
+    &--form {
+      padding-top: 92px;
+      padding-right: 80px;
+      padding-bottom: 72px;
+      padding-left: 80px;
+    }
+  }
+
+  .promo-text__span {
+    display: inline;
+  }
 }
 
 @include media_queries_l() {
-    .promo-text {
-        padding-right: 190px;
-        padding-left: 190px;
+  .promo-text {
+    width: 960px;
 
-        @include margin-center();
+    padding-right: 190px;
+    padding-left: 190px;
 
-        width: 960px;
+    @include margin-center();
 
-        &--top {
-            min-height: 240px;
-        }
-
-        &--bottom {
-            padding-top: 5px;
-            padding-bottom: 66px;
-        }
-
-        &--form {
-            padding-right: 95px;
-            padding-bottom: 70px;
-            padding-left: 95px;
-        }
+    &--top {
+      min-height: 240px;
     }
+
+    &--bottom {
+      padding-top: 5px;
+      padding-bottom: 66px;
+    }
+
+    &--form {
+      padding-right: 95px;
+      padding-bottom: 70px;
+      padding-left: 95px;
+    }
+  }
 }

@@ -1,27 +1,27 @@
 .page-header {
-    width: 100%;
+  box-sizing: border-box;
 
-    box-sizing: border-box;
+  width: 100%;
 
-    background-color: $sixteenth-color;
+  background-color: $sixteenth-color;
 
-    &--start {
-        min-height: 733px;
-    }
+  &--start {
+    min-height: 733px;
+  }
 }
 
 @include media_queries_m() {
-    .page-header {
-        &--start {
-            min-height: 729px;
-        }
+  .page-header {
+    &--start {
+      min-height: 729px;
     }
+  }
 }
 
 @include media_queries_l() {
-    .page-header {
-        &--start {
-            min-height: 853px;
-        }
+  .page-header {
+    &--start {
+      min-height: 853px;
     }
+  }
 }

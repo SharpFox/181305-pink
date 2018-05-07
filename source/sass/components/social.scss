@@ -1,60 +1,60 @@
 .social {
-    @include flex-center();
+  @include flex-center();
 
-    box-sizing: border-box;
+  box-sizing: border-box;
 
-    height: 51px;
+  height: 51px;
 }
 
 .social__link {
-    position: relative;
+  position: relative;
 
-    box-sizing: border-box;
+  box-sizing: border-box;
 
-    font-size: 0;
+  height: 51px;
+  width: 51px;
 
-    margin-left: 6px;
-    margin-right: 6px;
+  margin-left: 6px;
+  margin-right: 6px;
 
-    border-width: 3px;
-    border-style: solid;
-    border-color: transparentize($sixth-color, 0.7);
-    border-radius: 50%;
+  font-size: 0;
 
-    transition-duration: $primary-transition-duration;
+  border-width: 3px;
+  border-style: solid;
+  border-color: transparentize($sixth-color, 0.7);
+  border-radius: 50%;
 
-    height: 51px;
-    width: 51px;
+  transition-duration: $primary-transition-duration;
 
-    &:hover {
-        border-color: $sixth-color;
-    }
+  &:hover {
+    border-color: $sixth-color;
+  }
 
-    &:active {
-        opacity: 0.1;
-    }
+  &:active {
+    opacity: 0.1;
+  }
 }
 
 .social__svg {
-    @include absolute-pseudo-element();
+  @include absolute-pseudo-element();
 
-    top: 50%;
-    left: 50%;
+  top: 50%;
+  left: 50%;
 
-    fill: $second-color;
+  fill: $second-color;
 
-    transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 @include media_queries_m() {
-    .social {
-        width: 320px;
-    }
+  .social {
+    width: 320px;
+  }
 }
 
 @include media_queries_l() {
-    .social {
-        margin-left: 151px;
-        margin-right: 150px;
-    }
+  .social {
+    margin-left: 151px;
+    margin-right: 150px;
+  }
 }
