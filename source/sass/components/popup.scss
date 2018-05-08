@@ -1,0 +1,137 @@
+.popup {
+  display: none;
+
+  width: 320px;
+
+  padding-top: 43px;
+  padding-bottom: 50px;
+
+  margin: 0 auto;
+
+  text-align: center;
+
+  box-shadow: 0 7px 30px 0 rgba($seventeenth-color, 0.15);
+}
+
+.popup--success {
+  padding-top: 45px;
+  padding-bottom: 0;
+}
+
+.popup__title {
+  margin-bottom: 37px;
+
+  font-family: $font-primary;
+  color: $seventeenth-color;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.popup__description {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 37px;
+  margin-top: 0;
+
+  line-height: 24px;
+}
+
+.popup__close {
+  display: block;
+
+  margin: 0 auto;
+
+  width: 280px;
+  height: 63px;
+
+  font-family: $font-primary;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $first-color;
+
+  border-radius: 2px;
+  border: none;
+  background-color: $ninth-color;
+
+  &:hover {
+    background-color: $fifteenth-color;
+  }
+
+  &:active {
+    color: transparentize($first-color, 0.7);
+  }
+
+  &:disabled {
+    color: $first-color;
+
+    background-color: $eighth-color;
+  }
+}
+
+.popup__background {
+  padding-top: 48px;
+  padding-bottom: 52px;
+
+  background-color: $twenty-third-color;
+}
+
+@include media_queries_m() {
+  .popup {
+    box-sizing: border-box;
+
+    width: 460px;
+
+    padding-top: 40px;
+    padding-bottom: 52px;
+  }
+
+  .popup--success {
+    padding-top: 45px;
+    padding-bottom: 0;
+  }
+
+  .popup__title {
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-bottom: 22px;
+
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .popup__description {
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-top: 0;
+    margin-bottom: 38px;
+
+    font-size: 18px;
+  }
+
+  .popup__close {
+    width: 300px;
+  }
+}
+
+@include media_queries_l() {
+  .popup {
+    padding-top: 45px;
+  }
+
+  .popup--success {
+    width: 780px;
+  }
+
+  .popup__close--success {
+    width: 460px;
+  }
+
+  .popup__description--success {
+    margin-left: 190px;
+    margin-right: 190px;
+  }
+}

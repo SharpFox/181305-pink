@@ -1,0 +1,190 @@
+.contacts {
+  box-sizing: border-box;
+
+  width: 100%;
+
+  padding-top: 42px;
+}
+
+.contacts__main-title {
+  margin-top: 0;
+  margin-bottom: 37px;
+
+  @include font-set(300, 24px, 29px);
+  text-align: center;
+}
+
+.contacts__inner {
+  box-sizing: border-box;
+
+  padding-right: 20px;
+  padding-bottom: 37px;
+  padding-left: 20px;
+}
+
+.contacts__item {
+  text-align: center;
+
+  &--tel {
+    margin-bottom: 23px;
+  }
+
+  &--email {
+    margin-bottom: 27px;
+  }
+}
+
+.contacts__title {
+  display: block;
+
+  @include font(18px, 18px);
+}
+
+.contacts__text {
+  display: block;
+
+  margin-top: 4px;
+
+  @include font-set(300, 24px, 30px);
+  color: $second-color;
+}
+
+.contacts__link {
+  display: block;
+
+  margin-top: 6px;
+
+  @include font-set(300, 24px, 30px);
+  color: $second-color;
+  text-decoration: none;
+}
+
+.contacts__map {
+  border-color: $twenty-first-color;
+
+  position: relative;
+
+  height: 202px;
+  width: 100%;
+
+  &::after {
+    @include absolute-pseudo-element();
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 34px;
+  }
+}
+
+@include media_queries_m() {
+  .contacts {
+    padding-top: 46px;
+  }
+
+  .contacts__main-title {
+    width: 400px;
+
+    @include margin-center();
+    margin-bottom: 47px;
+
+    @include font(40px, 48px);
+  }
+
+  .contacts__inner {
+    @include flex-center();
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    padding-bottom: 0;
+  }
+
+  .contacts__item {
+    box-sizing: border-box;
+
+    width: 48.3%;
+
+    margin-bottom: 49px;
+
+    &--address {
+      width: 35%;
+      min-height: 90px;
+
+      @include margin-center();
+      margin-bottom: 23px;
+    }
+  }
+
+  .contacts__text {
+    margin-top: 7px;
+  }
+
+  .contacts__map {
+    height: 373px;
+
+    &::after {
+      height: 68px;
+    }
+  }
+}
+
+@include media_queries_l() {
+  .contacts {
+    padding-top: 63px;
+  }
+
+  .contacts__main-title {
+    width: 500px;
+
+    margin-bottom: 60px;
+
+    @include font(50px, 60px);
+  }
+
+  .contacts__inner {
+    flex-wrap: nowrap;
+
+    width: 960px;
+
+    @include margin-center();
+  }
+
+  .contacts__item {
+    width: 30.3%;
+
+    margin-bottom: 19px;
+
+    &--email {
+      order: 1;
+    }
+  }
+
+  .contacts__text {
+    margin-top: 25px;
+  }
+
+  .contacts__link {
+    margin-top: 27px;
+
+    &:hover {
+      color: $sixth-color;
+      text-decoration: underline;
+    }
+
+    &:active {
+      color: $sixth-color;
+      text-decoration: none;
+
+      opacity: 0.3;
+    }
+  }
+
+  .contacts__map {
+    height: 502px;
+
+    &::after {
+      height: 105px;
+    }
+  }
+}
