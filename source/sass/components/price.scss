@@ -45,8 +45,7 @@
   span {
     display: block;
 
-    font-weight: 300;
-    font-size: 24px;
+    @include font-set(300, 24px, 33px);
   }
 
   &--hit {
