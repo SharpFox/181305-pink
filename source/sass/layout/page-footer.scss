@@ -56,9 +56,9 @@
 
   width: 280px;
 
-  & p {
+ /* & p {
     margin: 0;
-  }
+  }*/
 }
 
 @include media_queries_m() {
@@ -86,7 +86,7 @@
 
 @include media_queries_l() {
   .page-footer {
-    min-height: 225px;
+    min-height: 197px;
 
     &__copyright {
       width: 172px;
@@ -98,7 +98,7 @@
   .page-footer__wrapper {
     width: 940px;
 
-    padding-right: 130px;
-    padding-left: 130px;
+    padding-right: 0;
+    padding-left: 0;
   }
 }

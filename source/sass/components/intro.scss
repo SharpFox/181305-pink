@@ -1,7 +1,7 @@
 .intro {
   box-sizing: border-box;
 
-  min-height: 237px;
+  min-height: 240px;
 
   margin-top: -70px;
 }
@@ -14,10 +14,10 @@
 
   width: 280px;
 
-  padding-top: 102px;
+  padding-top: 99px;
   padding-bottom: 32px;
-  padding-right: 20px;
-  padding-left: 20px;
+  padding-right: 19px;
+  padding-left: 21px;
 
   &--index {
     padding-top: 493px;
@@ -28,7 +28,7 @@
 }
 
 .intro__main-title {
-  margin: 0;
+  margin: 0 auto;
 
   @include font-set(300, 24px, 29px);
   text-align: center;
@@ -168,6 +168,10 @@
     padding-bottom: 75px;
     padding-right: 20px;
     padding-left: 15px;
+
+    &--index {
+      margin-left: 0;
+    }
   }
 
   .intro__main-title {

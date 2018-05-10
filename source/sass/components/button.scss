@@ -16,7 +16,10 @@
 }
 
 @include media_queries_l() {
-  .btn {
+  .button {
+    padding-left: 22px;
+    padding-right: 22px;
+
     @include font(21px, 18px);
   }
 }
