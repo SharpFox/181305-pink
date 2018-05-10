@@ -55,10 +55,6 @@
   box-sizing: border-box;
 
   width: 280px;
-
- /* & p {
-    margin: 0;
-  }*/
 }
 
 @include media_queries_m() {
