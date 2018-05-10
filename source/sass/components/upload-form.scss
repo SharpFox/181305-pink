@@ -109,11 +109,15 @@
 
 .upload-form__btn {
   background-color: transparent;
+
   border-width: 3px;
   border-style: solid;
   transition-duration: $primary-transition-duration;
 
   &--post {
+    padding-left: 90px;
+    padding-right: 90px;
+
     color: $second-color;
 
     border-color: $second-color;
@@ -132,6 +136,9 @@
   }
 
   &--cancel {
+    padding-left: 103px;
+    padding-right: 103px;
+
     margin-top: 12px;
 
     color: transparentize($sixth-color, 0.9);
@@ -244,7 +251,15 @@
   .upload-form__btn {
     padding-left: 25px;
 
+    &--post {
+      padding-left: 80px;
+      padding-right: 80px;
+    }
+
     &--cancel {
+      padding-left: 93px;
+      padding-right: 93px;
+
       margin-top: 24px;
     }
   }
