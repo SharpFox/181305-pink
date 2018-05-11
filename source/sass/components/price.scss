@@ -45,8 +45,7 @@
   span {
     display: block;
 
-    font-weight: 300;
-    font-size: 24px;
+    @include font-set(300, 24px, 33px);
   }
 
   &--hit {
@@ -242,7 +241,7 @@
 
 @include media_queries_l() {
   .price {
-    padding-top: 154px;
+    padding-top: 139px;
     padding-bottom: 95px;
   }
 
