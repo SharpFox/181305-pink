@@ -5,6 +5,12 @@
   padding-bottom: 50px;
 
   overflow: hidden;
+
+  background-color: $twenty-third-color;
+  background-image: url("../img/bg/bg-triangle-white.svg");
+  background-repeat: no-repeat;
+  background-position: -5px 0;
+  background-size: contain;
 }
 
 .price__table {
@@ -241,7 +247,7 @@
 
 @include media_queries_l() {
   .price {
-    padding-top: 139px;
+    padding-top: 136px;
     padding-bottom: 95px;
   }
 

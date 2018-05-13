@@ -1,3 +1,7 @@
+.feedback-form {
+  margin-bottom: 30px;
+}
+
 .feedback-form__item {
   box-sizing: border-box;
 
@@ -111,11 +115,12 @@
     width: 35px;
 
     @include absolute-pseudo-element();
-    background-color: $first-color;
 
     border-width: 2px;
     border-style: solid;
     border-color: $eighth-color;
+
+    background-color: $first-color;
 
     left: 0;
     top: -4px;
@@ -249,6 +254,9 @@
 
   &--goals {
     padding-top: 38px;
+    padding-left: 20px;
+    padding-right: 20px;
+
     margin-bottom: 43px;
   }
 }
@@ -269,9 +277,9 @@
   }
 }
 
-.feedback-form__svg {
+/*.feedback-form__svg {
   display: none;
-}
+}*/
 
 .feedback-form__textarea {
   box-sizing: border-box;
@@ -309,8 +317,10 @@
 
 .feedback-form__btn {
   margin-top: 45px;
+
   padding-top: 16px;
-  padding-left: 28px;
+  padding-left: 48px;
+  padding-right: 48px;
 
   line-height: 30px;
   text-transform: uppercase;
@@ -357,6 +367,8 @@
   .feedback-form {
     display: flex;
     flex-direction: column;
+
+    margin-bottom: 0;
   }
 
   .feedback-form__item {
@@ -479,6 +491,8 @@
   }
 
   .feedback-form__inner-contacts {
+    position: relative;
+
     display: flex;
     flex-direction: column;
 
@@ -487,6 +501,42 @@
 
     &:last-of-type {
       padding-bottom: 0;
+    }
+
+    &--tel {
+      &::after {
+        position: absolute;
+        content: "";
+
+        width: 20px;
+        height: 19px;
+        background-image: url("../img/icons/tel.svg");
+        background-repeat: no-repeat;
+        background-size: 20px 19px;
+
+        top: 22px;
+        right: 22px;
+
+        fill: $second-color;
+      }
+    }
+
+    &--email {
+      &::after {
+        position: absolute;
+        content: "";
+
+        width: 18px;
+        height: 14px;
+        background-image: url("../img/icons/email.svg");
+        background-repeat: no-repeat;
+        background-size: 18px 14px;
+
+        top: 22px;
+        right: 22px;
+
+        fill: $second-color;
+      }
     }
   }
 
@@ -503,7 +553,7 @@
     padding-right: 19px;
 
     margin-top: 67px;
-    margin-bottom: 36px;
+    margin-bottom: 32px;
   }
 
   .feedback-form__btn {
@@ -512,6 +562,7 @@
     margin-top: 0;
 
     padding-left: 28px;
+    padding-right: 28px;
   }
 
   .feedback-form__nottify {
@@ -563,6 +614,7 @@
 
     &--goals {
       padding-bottom: 8px;
+      margin-top: 68px;
     }
 
     &--name {

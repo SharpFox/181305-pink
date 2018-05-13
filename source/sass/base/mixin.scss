@@ -45,3 +45,9 @@
   margin-right: auto;
   margin-left: auto;
 }
+
+@mixin high-dpi {
+  @media (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
+    @content;
+  }
+}

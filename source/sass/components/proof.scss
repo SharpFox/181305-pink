@@ -10,8 +10,8 @@
   .proof__wrapper {
     width: 620px;
 
-    padding-top: 102px;
-    padding-left: 20px;
+    padding-top: 96px;
+    padding-left: 17px;
     padding-right: 20px;
     padding-bottom: 86px;
   }
@@ -23,13 +23,29 @@
 
     margin-left: auto;
 
+    &::before {
+      content: "";
+      position: absolute;
+      top: -35.5px;
+      left: -309px;
+      z-index: auto;
+
+      box-sizing: border-box;
+      width: 238px;
+      height: 275px;
+
+      background-image: url("../img/additional-icon/timer.svg");
+      background-repeat: no-repeat;
+      background-size: 238px 275px;
+    }
+
     &::after {
       box-sizing: border-box;
 
       content: "24";
       position: absolute;
 
-      top: 20px;
+      top: 20.4px;
       left: -291px;
 
 
@@ -73,10 +89,10 @@
 
 @include media_queries_l() {
   .proof__wrapper {
-    width: 940px;
+    width: 100%;
 
-    padding-top: 117px;
-    padding-left: 130px;
+    padding-top: 112px;
+    padding-left: 159px;
     padding-right: 130px;
   }
 
@@ -86,6 +102,22 @@
     width: 61%;
 
     margin-left: auto;
+
+    &::before {
+      background-image: url("../img/additional-icon/timer.svg");
+      background-size: 298px 345px;
+
+      content: "";
+
+      position: absolute;
+      top: -92px;
+      left: -365px;
+      z-index: auto;
+
+      box-sizing: border-box;
+      width: 298px;
+      height: 345px;
+    }
 
     &::after {
       content: "24";
@@ -118,10 +150,10 @@
   }
 
   .proof__text {
-    padding-right: 10px;
+    padding-right: 100px;
 
     margin-top: 21px;
-    margin-bottom: 30px;
+    margin-bottom: 32px;
 
     @include font(18px, 30px);
   }

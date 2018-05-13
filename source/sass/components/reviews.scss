@@ -96,6 +96,19 @@
 
   .reviews__svg {
     position: absolute;
+
+    top: 100px;
+    right: 0;
+    left: 3px;
+
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+
+    fill: $twenty-fourth-color;
+
+    width: 79px;
+    height: 63px;
   }
 
   .reviews__wrapper {

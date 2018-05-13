@@ -5,19 +5,26 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Пинк</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preload" href="./fonts/opensans.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="./css/style.min.css">
+    <script src="./js/vendor/svg4everybody.min.js"></script>
+    <script>svg4everybody();</script>
+    <script src="./js/vendor/picturefill.min.js"></script>
 </head>
 
 <body>
+
     <header class="page-header">
 
         <nav class="main-nav main-nav--nojs">
             <div class="main-nav__wrapper">
                 <ul class="main-nav__list">
                     <li class="main-nav__item main-nav__item--logo main-nav__item--logo-open">
-                        <a class="logo" href="index.html">
+                        <a class="logo logo--header" href="index.html">
                             <picture>
-                                <img src="http://placehold.it/150x100" width="75" height="22" alt="Логотип Pink">
+                                <source media="(min-width: 960px)" srcset="img/logo/logo-desktop@1x.svg 1x, img/logo/logo-desktop@2x.svg 2x">
+                                <source media="(min-width: 660px)" srcset="img/logo/logo-tablet.svg">
+                                <img src="img/logo/logo-mobile@1x.svg" alt="Лого Pink" srcset="img/logo/logo-mobile@1x.svg 1x, img/logo/logo-mobile@2x.svg 2x">
                             </picture>
                         </a>
                     </li>
@@ -112,21 +119,15 @@
                     Контактная информация
                 </h2>
                 <div class="feedback-form__wrapper">
-                    <div class="feedback-form__inner-contacts">
+                    <div class="feedback-form__inner-contacts feedback-form__inner-contacts--tel">
                         <label class="feedback-form__label  feedback-form__label--contacts" for="tel">Номер телефона</label>
                         <input class="feedback-form__input  feedback-form__input--contacts" type="tel" name="tel" id="tel" pattern="7\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}"
                             placeholder="Номер, пожалуйста">
-                        <svg class="feedback-form__svg" width="19.7" height="19.7">
-                            <use xlink:href="#"></use>
-                        </svg>
                     </div>
-                    <div class="feedback-form__inner-contacts">
+                    <div class="feedback-form__inner-contacts feedback-form__inner-contacts--email">
                         <label class="feedback-form__label  feedback-form__label--contacts" for="email">Адрес почты</label>
                         <input class="feedback-form__input  feedback-form__input--contacts" type="email" name="email" id="email" placeholder="Введите почту *"
                             required>
-                        <svg class="feedback-form__svg" width="18" height="14">
-                            <use xlink:href="#"></use>
-                        </svg>
                     </div>
                 </div>
             </fieldset>
@@ -162,32 +163,35 @@
 
     <footer class="page-footer">
         <div class="page-footer__wrapper">
-            <a class="logo logo--footer">
-                <picture>
-                    <img src="http://placehold.it/150x100" width="75" height="22" alt="Логотип Pink">
-                </picture>
+            <a class="logo logo--footer" href="index.html">
+                <svg class="logo__svg-footer-mobile" width="148" height="40">
+                    <use xlink:href="img/icons/sprite.svg#logoFooterMobile"></use>
+                </svg>
+                <svg class="logo__svg-footer-desktop" width="147" height="40">
+                    <use xlink:href="img/icons/sprite.svg#logoFooterDesktop"></use>
+                </svg>
             </a>
             <p class="social">
                 <a class="social__link" href="https://twitter.com/" aria-label="Мы в Твиттере">
                     <svg class="social__svg  social__svg--tw" width="18" height="14">
-                        <use xlink:href="#"></use>
+                        <use xlink:href="img/icons/sprite.svg#tw"></use>
                     </svg>
                 </a>
                 <a class="social__link" href="https://www.facebook.com/" aria-label="Мы в Фейсбуке">
                     <svg class="social__svg  social__svg--fb" width="9" height="18">
-                        <use xlink:href="#"></use>
+                        <use xlink:href="img/icons/sprite.svg#fb"></use>
                     </svg>
                 </a>
                 <a class="social__link" href="https://www.youtube.com/" aria-label="Мы в Ютубе">
                     <svg class="social__svg  social__svg--yt" width="15" height="13">
-                        <use xlink:href="#"></use>
+                        <use xlink:href="img/icons/sprite.svg#yt"></use>
                     </svg>
                 </a>
             </p>
             <a class="page-footer__copyright" href="https://htmlacademy.ru/">
                 <span>Разработано</span>
                 <svg class="page-footer__svg-copyright" width="27" height="34">
-                    <use xlink:href="#"></use>
+                    <use xlink:href="img/icons/sprite.svg#htmlacademy"></use>
                 </svg>
             </a>
         </div>
@@ -196,18 +200,18 @@
     <div class="popup">
         <h2 class="popup__title">Что-то пошло не&nbsp;так!</h2>
         <p class="popup__description">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-        <button class="button  popup__close" type="submit">Oк</button>
+        <button class="button popup__close" type="submit">Oк</button>
     </div>
 
     <div class="popup  popup--success">
         <h2 class="popup__title">Ваша заявка отправлена</h2>
-        <p class="popup__description  popup__description--success">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
+        <p class="popup__description popup__description--success">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
         <div class="popup__background">
-            <button class="button  popup__close  popup__close--success" type="submit">Закрыть окно</button>
+            <button class="button popup__close  popup__close--success" type="submit">Закрыть окно</button>
         </div>
     </div>
 
-    <script src="./js/nav-menu.js"></script>
+    <script src="./js/nav-menu.min.js"></script>
 </body>
 
 </html>
