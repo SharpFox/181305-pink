@@ -14,8 +14,8 @@
   height: 51px;
   width: 51px;
 
-  margin-left: 6px;
-  margin-right: 6px;
+  margin-left: 8px;
+  margin-right: 5px;
 
   font-size: 0;
 
@@ -48,7 +48,7 @@
 
 @include media_queries_m() {
   .social {
-    width: 320px;
+    width: 320px;  
   }
 }
 
