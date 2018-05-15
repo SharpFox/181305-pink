@@ -21,6 +21,14 @@
   margin-top: 42px;
   margin-left: 0;
   margin-right: 0;
+
+  &--second {
+    display: none;
+  }
+
+  &--third {
+    display: none;
+  }
 }
 
 .reviews__footer {
@@ -61,6 +69,14 @@
     flex-direction: column;
 
     margin-top: 26px;
+
+    &--second {
+      display: none;
+    }
+  
+    &--third {
+      display: none;
+    }
   }
 
   .reviews__footer {
@@ -97,7 +113,7 @@
   .reviews__svg {
     position: absolute;
 
-    top: 100px;
+    top: 70px;
     right: 0;
     left: 3px;
 
@@ -118,7 +134,7 @@
 
     width: 960px;
 
-    padding-top: 177px;
+    padding-top: 150px;
   }
 
   .reviews__pager {

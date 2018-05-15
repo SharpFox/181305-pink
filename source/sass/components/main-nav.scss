@@ -135,16 +135,20 @@
   &--open {
     transition-duration: $primary-transition-duration;
   }
-}
 
-.main-nav__item--logo {
-  min-height: 70px;
-  padding-top: 22px;
-  padding-left: 20px;
-}
+  &--logo {
+    min-height: 70px;
+    padding-top: 22px;
+    padding-left: 20px;
+  }
 
-.main-nav__item--logo-open {
-  background-color: transparentize($seventeenth-color, 0.7);
+  &--logo-open {
+    background-color: transparentize($seventeenth-color, 0.7);
+  }
+
+  &--nojs {
+    background-color: $sixth-color;
+  }
 }
 
 .main-nav__link {

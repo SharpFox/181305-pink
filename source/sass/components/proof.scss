@@ -88,20 +88,25 @@
 }
 
 @include media_queries_l() {
+  .proof {
+    background-color: $twenty-third-color;
+  }
+
   .proof__wrapper {
     width: 100%;
 
     padding-top: 112px;
     padding-left: 159px;
     padding-right: 130px;
+    padding-bottom: 114px;
   }
 
   .proof__inner {
     position: relative;
 
-    width: 61%;
+    width: 590px;
 
-    margin-left: auto;
+    margin-left: 37%;
 
     &::before {
       background-image: url("../img/additional-icon/timer.svg");
@@ -150,8 +155,6 @@
   }
 
   .proof__text {
-    padding-right: 100px;
-
     margin-top: 21px;
     margin-bottom: 32px;
 
