@@ -23,7 +23,7 @@
             navMain.classList.remove(MAIN_NAV_OPEN_CLASS);
             navToggle.classList.remove(MAIN_NAV_TOGGLE_OPEN_CLASS);
             navMainItemLogo.classList.add(MAIN_NAV_ITEM_LOGO_OPEN_CLASS);
-            
+
             return;
         }
 
