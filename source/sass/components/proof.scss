@@ -96,17 +96,18 @@
     width: 100%;
 
     padding-top: 112px;
-    padding-left: 159px;
-    padding-right: 130px;
+    padding-left: 360px;
     padding-bottom: 114px;
+    padding-right: 0;
   }
 
   .proof__inner {
     position: relative;
 
-    width: 590px;
+    width: 570px;
 
-    margin-left: 37%;
+    margin-left: auto;
+    margin-right: auto;
 
     &::before {
       background-image: url("../img/additional-icon/timer.svg");
@@ -156,7 +157,7 @@
 
   .proof__text {
     margin-top: 21px;
-    margin-bottom: 32px;
+    margin-bottom: 30px;
 
     @include font(18px, 30px);
   }

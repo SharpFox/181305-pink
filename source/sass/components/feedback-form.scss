@@ -505,38 +505,62 @@
     }
 
     &--tel {
+      &::before {
+        position: absolute;
+        content: "";
+        
+        width: 60px;
+        height: 60px;
+
+        top: 1px;
+        right: 0;
+
+        background-color: $eighth-color;
+      }
+
       &::after {
         position: absolute;
         content: "";
 
         width: 20px;
         height: 19px;
-        background-image: url("../img/icons/tel.svg");
-        background-repeat: no-repeat;
-        background-size: 20px 19px;
 
         top: 22px;
-        right: 22px;
+        right: 21px;
 
-        fill: $second-color;
+        background-image: url("../img/additional-icon/tel.svg");
+        background-repeat: no-repeat;
+        background-size: 20px 19px;
       }
     }
 
     &--email {
+      &::before {
+        position: absolute;
+        content: "";
+
+        width: 60px;
+        height: 60px;
+
+        top: 1px;
+        right: 0;
+
+        background-color: $eighth-color;
+      }
+
       &::after {
         position: absolute;
         content: "";
 
         width: 18px;
         height: 14px;
-        background-image: url("../img/icons/email.svg");
-        background-repeat: no-repeat;
-        background-size: 18px 14px;
 
-        top: 22px;
+        top: 24px;
         right: 22px;
 
-        fill: $second-color;
+        background-image: url("../img/additional-icon/email.svg");
+        background-repeat: no-repeat;
+        background-size: 18px 14px;      
       }
     }
   }

@@ -187,8 +187,6 @@
       padding-top: 0;
       padding-right: 0;
       padding-left: 0;
-
-      margin-left: 15px;
     }
 
     .advantages__item {
@@ -203,6 +201,9 @@
       width: 292px;
 
       &--first {
+        margin-left: 15px;
+        margin-right: 26px;
+
         background-image: url("../img/iphone-screen/iphone-screen-1-desktop@1x.png");
       }
 
@@ -211,6 +212,7 @@
       }
 
       &--third {
+        margin-right: 12px;
         background-image: url("../img/iphone-screen/iphone-screen-3-desktop@1x.png");
       }
     }
